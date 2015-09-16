@@ -26,7 +26,7 @@ class HoneydosController < ApplicationController
       err_msg = "The 'project' parameter was empty or not found"
       render json: { error_msg: err_msg }.to_json, status: 422
     else
-      # tweet = Tweet.create(project: params[:project])
+
       task = Honeydo.new
       task.project = params[:project]
       task.save
@@ -44,6 +44,15 @@ class HoneydosController < ApplicationController
     end
   end
 
-
+  def update
+    if Honeydo.exists?(params[:id])
+      task = Honeydo.find(params[:id])
+      task.completed = params[:completed]
+      task.save
+      render json: task.to_json, status: 200
+    else
+      render json: { error_msg: 'Record Not Found!', id: params[:id] }.to_json, status: 404
+    end
+  end
 
 end
