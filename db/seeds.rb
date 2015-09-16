@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+Honeydo.create(project: 'clean fridge')
+Honeydo.create(project: 'Wash Car')
+Honeydo.create(project: 'wax floor')
+Honeydo.create(project: 'polish brass')
+Honeydo.create(project: 'oil tables')
