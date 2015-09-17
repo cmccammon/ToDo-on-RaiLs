@@ -1,8 +1,11 @@
 #Rails TODO
 
+## Description
+Using a browser to add, delete and edit tasks in a Honeydo list.
 
-With Rails server running all tests pass.
-###Tests:
+
+##To run:
+Use a browser with Rails running to process the below URL's:
 
 Going to http://localhost:3000/honeydos displays all the honeydos as JSON
 Going to http://localhost:3000/honeydos/new displays an empty (new) todo as JSON
@@ -18,3 +21,4 @@ Sending a PUT request to http://localhost:3000/honeydos/1 with the params of { c
 ###How to add, delete and edit:
 
 You can use Postman to add, delete and edit projects in the honeydo list.
+
