@@ -51,7 +51,7 @@ class HoneydosController < ApplicationController
       task.save
       render json: task.to_json, status: 200
     else
-      render json: { error_msg: 'Record Not Found!', id: params[:id] }.to_json, status: 404
+      render json: { error_msg: 'No project found with that ID', id: params[:id] }.to_json, status: 404
     end
   end
 
